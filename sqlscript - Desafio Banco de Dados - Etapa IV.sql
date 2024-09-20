@@ -2,7 +2,7 @@
 
 CREATE TABLE Publicacao ( 
 
-    ISSN NUMBER PRIMARY KEY, 
+    ISSN NUMBER PRIMARY KEY NOT NULL, 
     TituloP VARCHAR2(255), 
     Editora VARCHAR2(255), 
     URL VARCHAR2(255) 
@@ -11,14 +11,14 @@ CREATE TABLE Publicacao (
 
 CREATE TABLE Area ( 
 
-    AreaID VARCHAR2(255) PRIMARY KEY, 
+    AreaID VARCHAR2(255) PRIMARY KEY NOT NULL, 
     DescricaoA VARCHAR2(255) 
 
 ); 
   
 CREATE TABLE Artigos ( 
 
-    ArtigoID NUMBER PRIMARY KEY, 
+    ArtigoID NUMBER PRIMARY KEY NOT NULL, 
     TituloA VARCHAR2(255), 
     ISSN NUMBER, 
     Ano NUMBER, 
@@ -31,7 +31,7 @@ CREATE TABLE Artigos (
 
 CREATE TABLE PalavraChave ( 
 
-    PC VARCHAR2(255) PRIMARY KEY, 
+    PC VARCHAR2(255) PRIMARY KEY NOT NULL, 
     DescricaoPC VARCHAR2(255) 
 
 );   
@@ -54,8 +54,7 @@ CREATE TABLE ArtigoPC (
     FOREIGN KEY (ArtigoID) REFERENCES Artigos(ArtigoID), 
     CONSTRAINT  fk_palavrachave_PC FOREIGN KEY (PC) REFERENCES PalavraChave(PC) 
 
-); 
- 
+);  
 
 /*5 inserções em cada tabela*/ 
  
