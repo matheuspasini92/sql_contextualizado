@@ -1,0 +1,1 @@
+σ NumeroDePaginas = 10 ( σ ArtigoID = 1 ( Artigo )) 

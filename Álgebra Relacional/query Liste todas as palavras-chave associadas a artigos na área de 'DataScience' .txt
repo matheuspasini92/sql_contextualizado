@@ -1,0 +1,1 @@
+π DescricaoPC (((σ AreaID = 1 (Artigo)) ⨝ ArtigoPC) ⨝ PalavraChave) 
